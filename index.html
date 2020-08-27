@@ -30,7 +30,7 @@
       margin: 0 auto;
     }
     img {
-      width: 40%;
+      height: 60%;
       margin-bottom: 30px;
     }
 
@@ -41,11 +41,40 @@
       color: white;
       border: 4px dashed white;
       text-decoration: none;
+      margin: 0 30px;
+    }
+    a:hover {
+      border-color:rgb(255, 0, 140);
+      animation-duration: 600ms;
+      animation-name: blink;
+      animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
     }
 
-    @media (max-width: 600px) {
+    @keyframes blink {
+      from {
+        text-shadow: 2px 2px 0px #00bdbd, -2px -2px 0px rgb(255, 0, 140);
+        border-color:rgb(255, 0, 140);
+      }
+
+      33% {
+        text-shadow: 2px -2px 0px #00bdbd, -2px 2px 0px rgb(255, 0, 140);
+      }
+
+      66% {
+        text-shadow: -2px -2px 0px #00bdbd, 2px 2px 0px rgb(255, 0, 140);
+        border-color: white;
+      }
+
+      to {
+        text-shadow: -2px 2px 0px #00bdbd, 2px -2px 0px rgb(255, 0, 140);
+      }
+    }
+
+    @media (orientation: portrait) {
       img {
         width:80%;
+        height: auto;
       }
     }
   </style>
