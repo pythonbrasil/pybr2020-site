@@ -50,6 +50,12 @@
       animation-iteration-count: infinite;
       animation-direction: alternate-reverse;
     }
+    nav {
+      display: flex;
+    }
+    nav a {
+      margin: 20px;
+    }
 
     @keyframes blink {
       from {
@@ -76,11 +82,17 @@
         width:80%;
         height: auto;
       }
+      nav {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="chamada-pybr.GIF"/>
-  <a href="https://www.eventbrite.com.br/e/python-brasil-2020-tickets-117927633727">>>> inscreva.se()</a>
+  <img src="chamada-pybr.gif"/>
+  <nav>
+    <a href="https://www.eventbrite.com.br/e/python-brasil-2020-tickets-117927633727">>>> inscreva.se()</a>
+    <a href="https://forms.gle/KkB94kzy2SbZzKqG6">>>> palestre()</a>
+  </nav>
 </body>
 </html>
