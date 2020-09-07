@@ -1,0 +1,889 @@
+@import "./colors"
+@import "./main"
+@import "./appbanner"
+
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    font-family: 'Roboto', sans-serif, serif
+    scroll-behavior: smooth
+
+.core-title
+    font-size: 55px
+    color: $black
+    text-align: center
+    display: block
+    position: relative
+    padding: 0 0 35px
+    margin: 0 0 35px
+
+    @media screen and (min-width: 720px)
+        font-size: 80px
+
+    &:after
+        content: ' '
+        width: 100px
+        height: 15px
+        border-radius: 10px
+        background-color: #fdf2dc
+        display: block
+        position: absolute
+        bottom: -5px
+        left: calc(50% - 50px)
+
+.rounded
+    background: #000
+    position: relative
+    padding: 20px 0 80px
+
+    p
+        font-family: Roboto
+        font-size: 20px
+        text-align: justify
+        color: #fdf2dc
+
+    h1
+        @extend .core-title
+
+    h2
+        @extend .core-title
+        font-size: 45px
+
+    &:before
+        content: ' '
+        position: absolute
+        display: block
+        width: 100%
+        height: 100px
+        background: #000
+        top: -80px
+        border-top-left-radius: 50%
+        border-top-right-radius: 50%
+.soon
+  min-height: 100px
+  > p
+    text-align: center
+    font-size: 18px
+.signal
+    background: #fdf2dc
+    width: 100px
+    height: 100px
+    margin: 0 auto 20px auto
+    display: flex
+    flex-direction: column
+    justify-items: center
+    justify-content: center
+    align-items: center
+    border: 2px solid #000
+    border-radius: 50%
+
+    & > svg
+        width: 50%
+        display: block
+        margin: 0 auto 5px
+
+.signal.ouro
+    color: #f5cc7d
+    border-color: #f5cc7d
+
+    & > svg path
+        fill: #f5cc7d!important
+
+.cloud
+    background: url(/assets/images/cloud_background_2.svg)
+    background-position: center
+    background-size: contain
+    opacity: .6
+
+
+.about
+    background: $orange-two
+    padding-bottom: 200px
+
+    .signal
+      z-index: 4
+      position: absolute
+      right: 0
+      left: 0
+      width: 150px
+      height: 150px
+      @media screen and (min-width: 1024px)
+          right: 10%
+          left: auto
+          width: 200px
+          height: 200px
+
+      & > svg
+          width: 40%
+
+      > a
+        display: block
+        padding: 8px 16px
+        background-color: #28223e
+        border-radius: 24px
+        color: white
+        text-decoration: none
+        cursor: pointer
+        font-size: 14px
+
+
+    p
+        display: block
+        max-width: 900px
+        width: 100%
+        padding: 20px
+        margin: 0 auto
+        text-align: center
+        font-size: 16px
+        color: white
+
+        @media screen and (min-width: 1024px)
+            font-size: 24px
+            padding: 16px
+
+
+
+
+
+
+    &:before
+        background: $orange-two
+
+.lineup
+  background: $orange-three
+
+  &:before
+      background: $orange-three
+
+  h1
+    font-size: 40px
+
+    @media screen and (min-width: 720px)
+        font-size: 80px
+
+  .tutorial
+    max-width: 600px
+    margin: 20px auto 50px auto
+    padding: 50px 20px 50px 20px
+    border-radius: 3px
+    background: #f9f9f9
+    box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.2)
+
+    > p
+        text-align: center
+        font-size: 16px
+        color: $orange-two
+    > h3
+        text-align: center
+        font-size: 24px
+        color: $blue-two
+        margin-bottom: 8px
+
+    > a.button
+        display: block
+        width: auto
+        max-width: 300px
+        margin: 40px auto 20px auto
+        text-align: center
+        padding: 16px
+        border-radius: 50px
+        font-size: 18px
+        background: $orange-two
+        color: white
+        text-decoration: none
+
+
+.keynote
+    background: $orange-three
+
+    & > .cloud
+        width: 100%
+        min-height: 600px
+        position: absolute
+        opacity: .3
+
+    &:before
+        background: $orange-three
+
+    // .submit
+    //   max-width: 600px
+    //   margin: 20px auto 50px auto
+    //   padding: 50px 20px 50px 20px
+    //   border-radius: 3px
+    //   background: #f9f9f9
+    //   box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.2)
+    //
+    //   > p
+    //     text-align: center
+    //     font-size: 16px
+    //     color: $orange-two
+    //   > a
+    //     display: block
+    //     width: auto
+    //     max-width: 350px
+    //     margin: 40px auto 20px auto
+    //     text-align: center
+    //     padding: 16px
+    //     border-radius: 50px
+    //     font-size: 24px
+    //     background: $orange-two
+    //     color: white
+    //     text-decoration: none
+
+    .keynoter
+        display: block
+        padding: 15px 60px 55px
+
+        @media screen and (min-width: 720px)
+            display: grid
+            padding: 15px 60px 55px
+            align-items: center
+            grid-column-gap: 30px
+
+        & > .photo
+            border-radius: 50%
+            height: 150px
+            max-width: 150px
+            background-size: contain
+            background-position: center center
+            position: relative
+            margin: 0 auto 20px auto
+
+            @media screen and (min-width: 720px)
+                height: 180px
+                max-width: none
+                margin: 0
+
+            @media screen and (min-width: 1024px)
+                height: 280px
+                max-width: none
+                margin: 0
+
+            > .social
+                display: block
+                position: absolute
+                width: 100%
+                text-align: center
+                bottom: -7%
+                > a
+                  display: inline-block
+                  vertical-align: middle
+                  width: 40px
+                  height: 40px
+                  border-radius: 50%
+                  background: white
+                  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+
+                  @media screen and (min-width: 1024px)
+                      width: 50px
+                      height: 50px
+                  > svg
+                    width: 100%
+                    height: 100%
+                    fill: $orange-three
+
+        & > .content
+            text-align: center
+            @media screen and (min-width: 720px)
+                text-align: left
+            & > h3
+                font-size: 34px
+                font-weight: bold
+                margin-bottom: 0px
+                color: $blue-two
+
+            & > h4
+                font-weight: normal
+                margin-bottom: 20px
+                color: $blue-two
+
+            & > p
+                font-size: 18px
+
+
+        &:nth-child(even)
+            grid-template-columns: 100px auto 0
+
+            @media screen and (min-width: 720px)
+                grid-template-columns: 180px auto 5%
+
+            @media screen and (min-width: 1024px)
+                grid-template-columns: 280px auto 15%
+
+        &:nth-child(odd)
+            grid-template-columns: 0 auto 100px
+
+            @media screen and (min-width: 720px)
+                grid-template-columns: 5% auto 180px
+
+            @media screen and (min-width: 1024px)
+                grid-template-columns: 15% auto 280px
+
+            & > .content
+                grid-column: 2
+                grid-row: 1
+                @media screen and (min-width: 720px)
+                    text-align: right
+
+            & > .photo
+                grid-column: 3
+                grid-row: 1
+
+.sponsors
+    background: $yellow-two
+
+    &:before
+        background: $yellow-two
+
+    .sponsor-action
+      text-align: center
+      position: relative
+
+      > p
+        font-size: 20px
+        font-weight: bold
+        text-transform: uppercase
+        color: $orange
+        text-align: center
+        margin: 0 auto
+        padding: 8px
+
+        @media screen and (min-width: 720px)
+            font-size: 32px
+            padding: 16px
+
+        @media screen and (min-width: 1024px)
+            font-size: 40px
+            padding: 16px
+
+      .sponsor-button-container
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 30px
+
+        .button
+            background: $blue-two
+            padding: 16px
+            margin: 10px
+            color: white
+            font-size: 16px
+            display: inline
+            text-align: center
+            border-radius: 50px
+            text-decoration: none
+            max-width: 250px
+            top: 120px
+            left: 0
+            right: 0
+
+    h1
+        @extend .core-title
+        padding-top: 60px
+        font-size: 40px
+
+        &:after
+            background-color: $orange
+    h2
+        &:after
+            background-color: $orange
+
+
+    & > .sponsor-section
+        background: $yellow-two
+
+        & > div
+            width: 100%
+            padding: 20px
+
+            .signal
+                background: #28223e
+
+            .diamante
+                color: #f2f2f2
+                border-color: #f2f2f2
+
+                & > svg path
+                    fill: #f2f2f2!important
+
+            .platina
+                color: #b0bec5
+                border-color: #b0bec5
+
+                & > svg path
+                    fill: #b0bec5!important
+
+            .ouro
+                color: #f5cc7d
+                border-color: #f5cc7d
+
+                & > svg path
+                    fill: #f5cc7d!important
+
+            .prata
+                color: #eceff1
+                border-color: #eceff1
+
+                & > svg path
+                    fill: #eceff1!important
+
+            .bronze
+                color: #953f27
+                border-color: #953f27
+
+                & > svg path
+                    fill: #953f27!important
+
+            &:nth-child(1)
+                background: $yellow-two
+
+
+            &:nth-child(2)
+                background: $yellow-two
+                padding-top: 50px
+
+            &:nth-child(3)
+                background: $yellow-two
+                padding-top: 50px
+                padding-bottom: 80px
+
+            > .sponsor-entity-container
+              display: block
+              @media screen and (min-width: 896px)
+                display: flex
+                flex-flow: wrap
+                justify-content: center
+                width: 100%
+
+              > .sponsor-entity
+                text-align: center
+                margin: 10px auto
+                width: 100px
+                height: 100px
+                line-height: 100px
+                @media screen and (min-width: 896px)
+                  margin: 10px 30px
+                  width: 150px
+                  height: 150px
+                  line-height: 150px
+
+                > a
+                  display: inline
+
+                  > img
+                    max-height: 100%
+                    max-width: 100%
+                    vertical-align: middle
+
+              > .prata
+                width: 125px
+                height: 125px
+                line-height: 125px
+                @media screen and (min-width: 896px)
+                  width: 187px
+                  height: 187px
+                  line-height: 187px
+
+              > .ouro
+                width: 156px
+                height: 156px
+                line-height: 156px
+                @media screen and (min-width: 896px)
+                  width: 233px
+                  height: 233px
+                  line-height: 233px
+
+              > .platina
+                width: 195px
+                height: 195px
+                line-height: 195px
+                @media screen and (min-width: 896px)
+                  width: 291px
+                  height: 291px
+                  line-height: 291px
+
+              > .diamante
+                width: 243px
+                height: 243px
+                line-height: 243px
+                @media screen and (min-width: 896px)
+                  width: 363px
+                  height: 363px
+                  line-height: 363px
+
+        .partners
+          padding-top: 50px
+          position: relative
+          > hr
+            height: 4px
+            background: #28223e
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            margin: 0 auto
+            width: 230px
+            @media screen and (min-width: 550px)
+                width: 500px
+
+.cityguide
+    background: $yellow-three
+    padding-bottom: 0
+
+    .cityguide-action
+      text-align: center
+      position: relative
+
+      .cityguide-button-container
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 30px
+
+        .button
+            background: $blue-two
+            padding: 16px
+            margin: 10px
+            color: white
+            font-size: 16px
+            display: inline
+            text-align: center
+            border-radius: 50px
+            text-decoration: none
+            max-width: 250px
+            top: 120px
+            left: 0
+            right: 0
+
+    & > .cloud
+        width: 100%
+        min-height: 600px
+        position: absolute
+        opacity: .3
+
+    &:before
+        background: $yellow-three
+
+    h2
+        &:after
+            background-color: $orange-two
+
+    h3
+        text-align: center
+        font-size: 24px
+        color: $blue-two
+        margin-bottom: 8px
+
+        &:after
+            background-color: $orange-two
+
+    .cityguide-section
+        h3
+            text-align: center
+            font-size: 36px
+            color: $blue-two
+            margin-bottom: 8px
+            &:after
+                background-color: $orange-two
+
+    .hotel
+        display: block
+        padding: 15px 60px 55px
+
+        @media screen and (min-width: 720px)
+            display: grid
+            padding: 15px 60px 55px
+            align-items: center
+            grid-column-gap: 30px
+
+        img
+            max-width: 180px
+            max-height: 180px
+            background-size: contain
+            background-position: center center
+            position: relative
+            float: right
+
+        & > .content
+            text-align: center
+
+
+            @media screen and (min-width: 720px)
+                text-align: left
+            & > h3
+                font-size: 34px
+                font-weight: bold
+                margin-bottom: 0px
+                color: $blue-two
+
+            & > h4
+                font-size: 24px
+                font-weight: bold
+                margin-bottom: 0px
+                color: $blue-two
+
+            & > *
+                color: $blue-two
+                font-size: 14px
+                font-family: Roboto
+                padding: 8px
+                & > code
+                    font-family: "Lucida Console"
+
+                & > a
+                    color: $blue-two
+                    font-size: 14px
+                    text-decoration: none
+
+                    &:hover
+                        text-decoration: underline
+
+            & > table
+                border-radius: 3px
+                border-collapse: collapse
+                max-width: 600px
+                padding: 5px
+                margin: 5px
+
+                & > thead > tr > th
+                    color: $gray-one
+                    background: $black
+                    border-bottom: 4px solid #9ea7af
+                    border-right: 1px solid #343a45
+                    font-size: 16px
+                    font-weight: 100
+                    padding: 8px 20px
+                    text-align: left
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1)
+                    vertical-align: middle
+
+                    &:first-child
+                        border-top-left-radius: 6px
+
+                    &:last-child
+                        border-top-right-radius: 6px
+                        border-right: none
+
+                & > tbody > tr
+                    border-top: 1px solid #C1C3D1
+                    border-bottom-: 1px solid #C1C3D1
+                    color: #666B85
+                    font-size: 16px
+                    font-weight: normal
+                    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1)
+
+                    & > td
+                        background: #FFFFFF
+                        padding: 8px 20px
+                        text-align: left
+                        vertical-align: middle
+                        font-weight: 300
+                        font-size: 14px
+                        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1)
+                        border-right: 1px solid #C1C3D1
+
+                        &:first-child
+                            border-bottom-left-radius: 6px
+                        &:last-child
+                            border-bottom-right-radius: 6px
+
+        &:nth-child(even)
+            grid-template-columns: 100px auto 0
+
+            @media screen and (min-width: 720px)
+                grid-template-columns: 180px auto 5%
+
+            @media screen and (min-width: 1024px)
+                grid-template-columns: 280px auto 15%
+
+        &:nth-child(odd)
+            grid-template-columns: 0 auto 100px
+
+            @media screen and (min-width: 720px)
+                grid-template-columns: 5% auto 180px
+
+            @media screen and (min-width: 1024px)
+                grid-template-columns: 15% auto 280px
+
+            & > .content
+                grid-column: 2
+                grid-row: 1
+                @media screen and (min-width: 720px)
+                    text-align: right
+
+            & > .photo
+                grid-column: 3
+                grid-row: 1
+
+
+.footer
+    background: $black
+    padding: 0 0 20px
+
+    &:before
+        background: $black
+
+    & > div
+        max-width: 900px
+        width: 100%
+        margin: 0 auto
+        padding: 20px
+
+        @media screen and (min-width: 896px)
+            display: grid
+            grid-template-columns: 50% 50%
+
+    .social
+        text-align: center
+        grid-row: 1
+        grid-column: 2
+        position: relative
+
+        .button.disabled
+          opacity: 0.6
+          pointer-events: none
+          cursor: default
+
+        span.soon-tag
+          display: block
+          padding: 8px
+          background-color: white
+          color: $orange
+          font-weight: bold
+          position: absolute
+          border-radius: 3px
+          font-size: 12px
+          top: 0
+          right: -10px
+          transform: rotate(20deg)
+
+        & > .social-icons
+            display: inline-block
+            margin-right: 20px
+            text-decoration: none
+
+            &:last-child
+                margin-right: 0
+
+            & > svg
+                width: 60px
+                margin-top: 20px
+                fill: #fbf3e4
+            path
+                fill: #fbf3e4!important
+
+    .newsletter
+      > p
+        display: inline-block
+        font-size: 14px
+        padding: 20px 0
+      > form
+        margin: 0 auto
+        padding: 8px 0
+        @media screen and (min-width: 896px)
+          margin: 0 40px
+
+        > input
+          display: inline-block
+          width: 80%
+          height: 42px
+          border-radius: 3px
+          border: 1px solid white
+          padding: 0 8px
+
+        > button
+          display: inline-block
+          height: 42px
+          padding: 8px
+          margin: 0
+          color: white
+          background-color: $blue-two
+          border-radius: 3px
+          border: 1px solid white
+          cursor: pointer
+
+          &:hover
+            background-color: $orange
+            border-color: $orange
+            color: white
+    .contact-info
+      display: block
+      > p
+        display: block
+        font-size: 14px
+        text-align: center
+        > a
+          color: $orange
+
+    .nav
+        grid-row: 1
+        grid-column: 1
+
+        & > ul
+            list-style: none
+            padding: 0
+            text-align: center
+
+            @media screen and (min-width: 896px)
+                text-align: left
+                float: left
+                margin-right: 60px
+
+            & > .header
+                color: $orange
+                font-size: 28px
+                font-weight: 600
+                margin-top: 30px
+
+                @media screen and (min-width: 896px)
+                    margin-top: 0px
+
+            & > .item
+                margin-top: 5px
+
+                &:first-child
+                    margin-top: 25px
+
+                & > a
+                    text-decoration: none
+                    color: #fbf3e4
+                    &:hover
+                      font-weight: bold
+
+
+        &:after
+            content: ' '
+            display: block
+            clear: both
+
+    .button
+        background: $orange
+        padding: 15px
+        color: $black
+        font-size: 25px
+        display: block
+        text-align: center
+        border-radius: 50px
+        text-decoration: none
+
+
+
+    .copyright
+        display: block
+        margin: 20px auto
+
+        > p
+            text-align: center
+            font-size: 12px
+            margin-bottom: 10px
+
+        @media screen and (min-width: 896px)
+            margin: 40px auto
+
+.prefooter
+    background: #fbf3e4
+    min-height: 60px
+
+    &:before
+        background: #fbf3e4
