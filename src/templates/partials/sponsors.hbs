@@ -1,0 +1,54 @@
+<div class="rounded sponsors">
+    <div class="sponsor-action" id="section-sponsor">
+      <p>A maior conferência de Python da América Latina</p>
+
+      <div class="sponsor-button-container">
+          <a href="/assets/pdfs/plano_de_patrocinio.pdf" target="_blank" class="button">
+              quero patrocinar
+          </a>
+          <a href="/assets/pdfs/sponsorship_plan.pdf" target="_blank" class="button">
+              I want to sponsor
+          </a>
+      </div>
+    </div>
+    <div class="sponsor-section" id="section-sponsors">
+        {{#if sponsors.sponsors.title}}
+            <h1>{{ sponsors.sponsors.title }}</h1>
+        {{/if}}
+        {{#each sponsors.sponsors.categories as |category|}}
+            <div>
+                <div class="signal {{category.type}}">
+                    {{>pylogo }}
+                    <div>{{category.type}}</div>
+                </div>
+                <div class="sponsor-entity-container">
+                    {{#each items}}
+                        <div class="sponsor-entity {{category.type}}">
+                            <a href="{{link}}" target="_blank">
+                                <img src="{{photo}}" alt="{{name}}">
+                            </a>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/each}}
+
+        <div class="partners">
+            <hr>
+            {{#each sponsors.partners}}
+                {{#if title}}
+                    <h2> {{ title }}</h2>
+                {{/if}}
+                <div class="sponsor-entity-container">
+                    {{#each items}}
+                        <div class="sponsor-entity">
+                            <a href="{{link}}" target="_blank">
+                                <img src="{{photo}}" alt="{{name}}">
+                            </a>
+                        </div>
+                    {{/each}}
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<footer class="rounded footer">
+    <div>
+        <div class="social">
+              <a href='{{footer.buyTicketLink}}' target="_blank" class="button">
+                  adquira seu ingresso
+              </a>
+            <a class="social-icons" target="_blank" href='{{footer.social.apybr.link}}'>
+                {{> svgs/pylogo }}
+            </a>
+            <a class="social-icons" target="_blank" href='{{footer.social.facebook.link}}'>
+                {{> svgs/facebook }}
+            </a>
+            <a class="social-icons" target="_blank" href='{{footer.social.instagram.link}}'>
+                {{> svgs/instagram }}
+            </a>
+            <a class="social-icons" target="_blank" href='{{footer.social.twitter.link}}'>
+                {{> svgs/twitter }}
+            </a>
+        </div>
+        <div class="nav">
+            {{#each footer.nav}}
+                <ul>
+                    <li class="header">{{title}}</li>
+                    {{#each items}}
+                        <li class="item">
+                            <a href={{link}}>
+                                {{text}}
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{/each}}
+        </div>
+    </div>
+    <div class="newsletter">
+      <p>Quer receber novidades sobre o evento? Cadastre seu e-mail.</p>
+      <form action="#" method="#">
+        <input type="email" name="email">
+        <button type="submit" name="button">cadastrar</button>
+      </form>
+    </div>
+    <div class="contact-info">
+      <p>Tem alguma dúvida sobre o evento? Fale conosco <a href="mailto:eventos@python.org.br" target="_blank">eventos@python.org.br</a>. </p>
+    </div>
+    <div class="copyright">
+        <p>PythonBrasil is a non-profit volunteer-driven conference for promoting the open-source Python programming language. It is supported by the Brazilian Python Association (APyB) and by the Python Software Foundation (PSF).</p>
+    </div>
+</footer>
