@@ -24,5 +24,5 @@ module.exports = {
         instagram: { link: 'https://www.instagram.com/pythonbrasil/', logo: '/images/instagram.svg' },
         apybr: { link: 'https://python.org.br/', logo: '/images/pylogo.svg' }
     },
-    buyTicketLink: 'https://pythonbrasil2019.eventbrite.com.br'
+    buyTicketLink: 'https://www.eventbrite.com.br/e/python-brasil-2020-tickets-117927633727'
 }
