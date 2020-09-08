@@ -3,7 +3,7 @@ module.exports = {
         {
             title: 'Sobre',
             items: [
-                { text: 'Local', link: 'https://goo.gl/maps/m7ttyu5CCnBjobmD7' },
+                //{ text: 'Local', link: 'https://goo.gl/maps/m7ttyu5CCnBjobmD7' },
                 { text: 'Keynotes', link: '#section-keynote' },
                 { text: 'Evento', link: '#section-about' },
                 // { text: 'Programação', link: '#' },
