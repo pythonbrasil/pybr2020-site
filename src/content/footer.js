@@ -4,19 +4,19 @@ module.exports = {
             title: 'Sobre',
             items: [
                 //{ text: 'Local', link: 'https://goo.gl/maps/m7ttyu5CCnBjobmD7' },
-                { text: 'Keynotes', link: '#section-keynote' },
+                // { text: 'Keynotes', link: '#section-keynote' },
                 { text: 'Evento', link: '#section-about' },
                 // { text: 'Programação', link: '#' },
                 { text: 'Código de Conduta', link: 'https://python.org.br/cdc/' },
             ]
         },
-        {
-            title: 'Patrocínio',
-            items: [
-                { text: 'Quero Patrocinar', link: '#section-sponsor' },
-                { text: 'Patrocinadores', link: '#section-sponsors' },
-            ]
-        },
+        // {
+        //     title: 'Patrocínio',
+        //     items: [
+        //         { text: 'Quero Patrocinar', link: '#section-sponsor' },
+        //         { text: 'Patrocinadores', link: '#section-sponsors' },
+        //     ]
+        // },
     ],
     social: {
         facebook: { link: 'https://www.facebook.com/pythonbrasil/', logo: '/images/facebook.svg' },
