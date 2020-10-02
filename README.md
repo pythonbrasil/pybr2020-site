@@ -2,7 +2,16 @@
 Site da Python Brasil 2020
 
 
-#### Rodando localmente
-```
-$ python -m http.server
+## Rodando localmente
+Pré-requisitos:
+- Node v11
+
+# Instalando dependências
+$ npm install
+
+# Gera o site na pasta dist/
+$ npm run build
+
+# Serve o site na porta 8080
+$ npm run serve
 ```

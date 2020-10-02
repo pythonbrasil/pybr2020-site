@@ -1,0 +1,32 @@
+<div class="rounded keynote" id="section-keynote">
+    <h2> Keynotes </h2>
+    {{#each keynotes}}
+        {{#if meta.publish}}
+        <div class="keynoter">
+            <div class="photo" style="background-image: url('/assets/images/keynotes/{{meta.photo}}')">
+              <div class="social">
+                {{#if meta.linkedin}}
+                  <a href="{{meta.linkedin}}" target="_blank">
+                    {{> svgs/linkedin}}
+                  </a>
+                {{/if}}
+                {{#if meta.github}}
+                  <a href="{{meta.github}}" target="_blank">
+                    {{> svgs/github}}
+                  </a>
+                {{/if}}
+                {{#if meta.twitter}}
+                  <a href="{{meta.twitter}}" target="_blank">
+                    {{> svgs/twitter }}
+                  </a>
+                {{/if}}
+              </div>
+            </div>
+            <div class="content">
+                {{{ html }}}
+            </div>
+
+        </div>
+        {{/if}}
+    {{/each}}
+</div>
