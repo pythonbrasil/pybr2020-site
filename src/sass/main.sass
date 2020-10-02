@@ -1,17 +1,17 @@
 .main
-    background: $orange
-    background-image: linear-gradient(to bottom, #f1ba91 30%, #f0a85e)
+    background: $secondary
+    background-image: linear-gradient(to bottom, $primary-light 30%, $primary-dark)
     min-height: 650px
     position: relative
 
     .main-button
       position: absolute
-      bottom: 25%
+      bottom: 20%
       width: 100%
       > a.button
-        background: $orange
+        background: $secondary
         padding: 15px
-        color: $black
+        color: $neutral-dark
         font-size: 25px
         display: block
         text-align: center
@@ -24,7 +24,7 @@
         width: 50px
         height: 50px
         border-radius: 50%
-        background: $black
+        background: $neutral-dark
         position: fixed
         right: 20px
         top: 20px
@@ -45,7 +45,7 @@
         .hamburguer
             height: 4px
             margin: 0 auto
-            background: #fdf2dc
+            background: $secondary-dark
             width: 20px
             position: relative
             top: calc(50% - 2px)
@@ -55,7 +55,7 @@
                 position: absolute
                 height: 4px
                 width: 20px
-                background: #fdf2dc
+                background: $secondary-dark
 
             &:after
                 top: -8px
@@ -81,7 +81,7 @@
             height: 500px
 
     & > .call
-        background: url(/assets/images/main_logo_ribeirao.png)
+        background: url(/assets/images/logo_colorido.png)
         background-position: center
         background-size: contain
         background-repeat: no-repeat
@@ -114,7 +114,7 @@
             z-index: 5
             width: 100%
             border-radius: 0
-            background: $black
+            background: $secondary-light
             display: none
 
             &.active
@@ -131,7 +131,7 @@
                     & > a
                         text-decoration: none
                         padding: 0 24px
-                        color: $yellow-three
+                        color: white
 
             @media screen and (min-width: 1024px)
                 top: 10px

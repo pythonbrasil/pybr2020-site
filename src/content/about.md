@@ -10,6 +10,6 @@ Serão sete dias de imersão, onde participantes poderão contribuir para projet
 
 Seguindo o lema Pessoas > Tecnologia, gostamos de conhecer quem participa de nosso evento, por isso existem questões sobre como as pessoas se veem em nosso formulário de inscrições. Esses dados servirão como estatísticas sobre nosso público e também orientarão futuras aprimorações em nossas políticas de diversidade. Esperamos que você se sinta confortável em colaborar com nossa pesquisa.
 
-Todas as pessoas que participam da Python Brasil devem concordar em seguir as orientações especificadas no Código de Conduta.
+Todas as pessoas que participam da Python Brasil devem concordar em seguir as orientações especificadas no [Código de Conduta](https://python.org.br/cdc/).
 
 Se tiver qualquer dúvida não hesite em entrar em contato pelo e-mail [eventos@python.org.br](mailto:eventos@python.org.br).
