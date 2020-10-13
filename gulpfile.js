@@ -50,7 +50,7 @@ gulpStatic({
             output: './dist'
         },
         {
-            input: './pdfs/**/*',
+            input: './src/pdfs/**/*',
             output: './dist/assets/pdfs/'
         },
         {
