@@ -1,12 +1,20 @@
 .main
     background: $secondary
-    background-image: linear-gradient(to bottom, $primary-light 30%, $primary-dark)
+    background: url(/assets/images/banner-site.jpeg)
+    background-size: cover
+    background-position: top center
     min-height: 650px
     position: relative
 
+    @media screen and (max-width: 600px)
+      min-height: 500px
+
+    @media screen and (max-width: 400px)
+      min-height: 370px
+
     .main-button
       position: absolute
-      bottom: 20%
+      bottom: 10%
       width: 100%
       > a.button
         background: $secondary
@@ -66,20 +74,6 @@
         @media screen and (min-width: 1024px)
             display: none
 
-    & > .dino
-        width: 550px
-        background: url(/assets/images/dinosaur.svg)
-        bottom: -20%
-        right: 0
-        background-position: center
-        position: absolute
-        background-size: 100%
-        opacity: 0.1
-        height: 500px
-
-        @media screen and (min-width: 0px)
-            height: 500px
-
     & > .call
         background: url(/assets/images/logo_colorido.png)
         background-position: center
@@ -97,7 +91,6 @@
             width: 100%
 
     & > .cloud
-        background: url(/assets/images/cloud_background_2.svg)
         background-size: contain
         background-position: center
         background-repeat: repeat-y
