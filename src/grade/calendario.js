@@ -122,34 +122,34 @@ document.addEventListener('DOMContentLoaded', function() {
             open_details();
         },
 
-        // eventRender: function(info) {
-        //     var meta = document.createElement("div");
-        //     meta.className = "meta";
+         eventRender: function(info) {
+             var meta = document.createElement("div");
+             meta.className = "meta";
 
-        //     // Palestrante
-        //     var author = info.event._def.extendedProps.private.author;
-        //     if (author) {
-        //         console.log("author", author);
-        //         var authorNode = document.createElement("div");
-        //         authorNode.className = "speaker";
-        //         authorNode.appendChild(
-        //             document.createTextNode(author)
-        //         )
-        //         meta.appendChild(authorNode);
-        //     }
-        //     // Sala
-        //     var location = info.event._def.extendedProps.location
-        //     if (location) {
-        //         var locationNode = document.createElement("div");
-        //         locationNode.className = "room";
-        //         locationNode.appendChild(
-        //             document.createTextNode(location)
-        //         )
-        //         meta.appendChild(locationNode);
-        //     }
+             // Palestrante
+             var author = info.event._def.extendedProps.private.author;
+             if (author) {
+                 console.log("author", author);
+                 var authorNode = document.createElement("div");
+                 authorNode.className = "speaker";
+                 authorNode.appendChild(
+                     document.createTextNode(author)
+                 )
+                 meta.appendChild(authorNode);
+             }
+             // Sala
+             var location = info.event._def.extendedProps.location
+             if (location) {
+                 var locationNode = document.createElement("div");
+                 locationNode.className = "room";
+                 locationNode.appendChild(
+                     document.createTextNode(location)
+                 )
+                 meta.appendChild(locationNode);
+             }
 
-        //     info.el.lastChild.appendChild(meta);
-        // },
+             info.el.lastChild.appendChild(meta);
+         },
         // Google Calendar settings
         googleCalendarApiKey: 'AIzaSyAIn8DyZFtthupLozgwIX3NUURFMWEIPb4',
         eventSources: [{
