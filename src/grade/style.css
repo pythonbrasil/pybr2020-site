@@ -85,17 +85,21 @@ footer>a:visited {
 }
 
 .speaker {
-    color: rgb(97, 88, 25);
-    background: #FFDC00;
+    color: #FF7F7F;
+    background: #462984;
     padding: 2px 6px;
     border-radius: 4px;
-    margin-right: 20px;
+}
+.speaker-keynote {
+    background: #FF7F7F;
+    color: #462984;
 }
 
 .room {
-    color: #7FDBFF;
-    background: #001f3f;
+    color: rgb(116, 255, 190);
+    background: #3C59F0;
     padding: 2px 6px;
+    margin-left: 20px;
     border-radius: 4px;
 }
 
@@ -168,4 +172,12 @@ footer>a:visited {
     .speaker {
         margin-right: 0;
     }
+}
+
+.keynote-entry {
+    background: #fff0f0;
+}
+
+.keynote-entry a {
+    font-weight: bolder;
 }

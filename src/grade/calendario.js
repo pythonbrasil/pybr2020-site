@@ -122,33 +122,45 @@ document.addEventListener('DOMContentLoaded', function() {
             open_details();
         },
 
-         eventRender: function(info) {
-             var meta = document.createElement("div");
-             meta.className = "meta";
+        eventRender: function(info) {
+            console.log('info', info);
+            var meta = document.createElement("div");
+            meta.className = "meta";
 
-             // Palestrante
-             var author = info.event._def.extendedProps.private.author;
-             if (author) {
-                 console.log("author", author);
-                 var authorNode = document.createElement("div");
-                 authorNode.className = "speaker";
-                 authorNode.appendChild(
-                     document.createTextNode(author)
-                 )
-                 meta.appendChild(authorNode);
-             }
-             // Sala
-             var location = info.event._def.extendedProps.location
-             if (location) {
-                 var locationNode = document.createElement("div");
-                 locationNode.className = "room";
-                 locationNode.appendChild(
-                     document.createTextNode(location)
-                 )
-                 meta.appendChild(locationNode);
-             }
+            var type = info.event._def.extendedProps.private.type;
 
-             info.el.lastChild.appendChild(meta);
+            // Palestrante
+            var author = info.event._def.extendedProps.private.author;
+            if (author) {
+                var authorNode = document.createElement("div");
+                if (type == "keynote") {
+                    authorNode.className = "speaker speaker-keynote";
+                } else {
+                    authorNode.className = "speaker";
+                }
+
+                authorNode.appendChild(
+                    document.createTextNode(author)
+                )
+                meta.appendChild(authorNode);
+            }
+            // Sala
+            var location = info.event._def.extendedProps.location
+            if (location) {
+                var locationNode = document.createElement("div");
+                locationNode.className = "room";
+                locationNode.appendChild(
+                    document.createTextNode(location)
+                )
+                meta.appendChild(locationNode);
+            }
+
+
+            if (type == "keynote") {
+                info.el.classList.add("keynote-entry");
+            }
+
+            info.el.lastChild.appendChild(meta);
          },
         // Google Calendar settings
         googleCalendarApiKey: 'AIzaSyAIn8DyZFtthupLozgwIX3NUURFMWEIPb4',
