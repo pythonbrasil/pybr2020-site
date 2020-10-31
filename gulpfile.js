@@ -54,6 +54,10 @@ gulpStatic({
             output: './dist/assets/pdfs/'
         },
         {
+            input: './src/pdfs/cdc/**/*',
+            output: './dist/'
+        },
+        {
             input: './src/submissao-de-palestras',
             output: './dist/'
         },
