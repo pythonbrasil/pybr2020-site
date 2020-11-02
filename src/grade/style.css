@@ -85,8 +85,8 @@ footer>a:visited {
 }
 
 .speaker {
-    color: #FF7F7F;
-    background: #462984;
+    color: #3a3a3a;
+    background: #f4f4f4;
     padding: 2px 6px;
     border-radius: 4px;
 }
@@ -96,8 +96,45 @@ footer>a:visited {
 }
 
 .room {
+    padding: 2px 6px;
+    margin-left: 20px;
+    border-radius: 4px;
     color: rgb(116, 255, 190);
     background: #3C59F0;
+}
+
+.room a {
+    margin-left: 0;
+}
+
+.pep0 {
+    color: rgb(116, 255, 190);
+    background: #3C59F0;
+}
+
+.pep8 {
+    color: #FF7F7F;
+    background: #462984;
+}
+
+.pep20 {
+    color: #2e2912;
+    background: #fff56f;
+}
+
+.pep20 {
+    color: #2e2912;
+    background: #fff56f;
+}
+
+.pep404 {
+    color: #132b16;
+    background: #6fff87;
+}
+
+.youtube {
+    color: rgb(0, 0, 0);
+    background: #cfcfcf;
     padding: 2px 6px;
     margin-left: 20px;
     border-radius: 4px;
