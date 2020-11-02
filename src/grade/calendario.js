@@ -147,12 +147,38 @@ document.addEventListener('DOMContentLoaded', function() {
             // Sala
             var location = info.event._def.extendedProps.location
             if (location) {
+                var discord_channel = info.event._def.extendedProps.private.discord_channel;
+                if (discord_channel) {
+                    var href = document.createElement("a");
+                    href.className = "discord";
+                    href.href = discord_channel;
+                    href.appendChild(
+                        document.createTextNode(location)
+                    );
+                } else {
+                    var href = document.createTextNode(location)
+                }
+
                 var locationNode = document.createElement("div");
                 locationNode.className = "room";
-                locationNode.appendChild(
-                    document.createTextNode(location)
-                )
+                locationNode.classList.add(location.replace(" ", "").toLowerCase());
+                locationNode.appendChild(href);
                 meta.appendChild(locationNode);
+            }
+
+            // Youtube
+            var youtube_channel = info.event._def.extendedProps.private.youtube_channel;
+            if (youtube_channel) {
+                var href = document.createElement("a");
+                href.className = "youtube";
+                href.href = youtube_channel;
+                href.appendChild(
+                    document.createTextNode("live")
+                );
+                var youtubeNode = document.createElement("div");
+                youtubeNode.appendChild(href);
+
+                meta.appendChild(youtubeNode);
             }
 
 
