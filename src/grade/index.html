@@ -20,12 +20,14 @@
     <div class='grade'>
         <div id='calendar'></div>
     </div>
+    
     <footer>
         <img class="python-logo" src="logo.png" /></div>
         <a class="footer-title" href="/">Python Brasil <span class="current-year">2020</span></a>
         <a href="https://calendar.google.com/calendar/embed?src=cis4uq8vegrfbjjn1qi9hvau1k@group.calendar.google.com">Incorporar agenda</a> &nbsp;
         <a href="https://calendar.google.com/calendar/ical/cis4uq8vegrfbjjn1qi9hvau1k@group.calendar.google.com/public/basic.ics">(.ics)</a> &nbsp;
-    </footer>
+        <button id="bfuso" class="cfuso" onclick="atualiza_horarios()">Exibir no horário local</button>
+    </footer>    
 
     <div id="full-detail" class="overlay">
         <!-- Button to close the overlay navigation -->
@@ -37,6 +39,7 @@
             <p><span id="overlay-author" class="speaker"></span></p>
             <p><span id="overlay-room" class="room"></span></p>
             <p id="overlay-description">Python Brasil 2020 - Programação.</p>
+            <p><a id="overlay-youtube"></a></p>
         </div>
     </div>
 
@@ -48,6 +51,7 @@
     <script src='timegrid.min.js'></script>
     <script src='list.min.js'></script>
     <script src='calendario.js'></script>
+    <script src='fuso.js'></script>
 </body>
 
 </html>

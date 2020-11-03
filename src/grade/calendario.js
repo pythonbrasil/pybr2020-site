@@ -7,13 +7,16 @@ function close_details() {
     document.getElementById("full-detail").style.display = "none";
 }
 
-function toggle_label(nodeId, value, display) {
+function toggle_label(nodeId, value, display, link) {
     var node = document.getElementById(nodeId);
     if (value) {
         node.innerHTML = value;
         node.style.display = display;
     } else {
         node.style.display = "none";
+    }
+    if (link){
+        node.href = link;
     }
 }
 
@@ -113,11 +116,18 @@ document.addEventListener('DOMContentLoaded', function() {
             var description = info.event._def.extendedProps.description || "";
             description = description.replace(/\\n\\n/g, "<br>");
             description = description.replace(/\\n/g, " ");
+            var youtube_link = info.event._def.extendedProps.private.youtube_channel;
 
             document.getElementById("overlay-description").innerHTML = description;
             document.getElementById("overlay-title").innerHTML = title;
             toggle_label("overlay-author", author, "inline");
             toggle_label("overlay-room", location, "inline");
+            
+            if(youtube_link){
+                toggle_label("overlay-youtube", "Assista no YouTube", "inline", youtube_link);
+            }else{
+                toggle_label("overlay-youtube", '', "inline");
+            }
 
             open_details();
         },
@@ -196,4 +206,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     calendar.render();
+    var bfuso = document.getElementById('bfuso');
+    if(verifica_fuso()){
+        bfuso.style.display = "inline";
+    }
+    else{
+        bfuso.style.display = "none";
+    }
 });

@@ -218,3 +218,16 @@ footer>a:visited {
 .keynote-entry a {
     font-weight: bolder;
 }
+
+
+.cfuso {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
