@@ -35,7 +35,7 @@
 
 .fc-sabado-view .fc-list-item:nth-child(n+1):not(.keynote-entry) { background-color: lightyellow; }
 .fc-sabado-view .fc-list-item:nth-child(n+4):not(.keynote-entry) { background-color: lightblue; }
-.fc-sabado-view .fc-list-item:nth-child(n+8):not(.keynote-entry) { background-color: lightyellow; }
+.fc-sabado-view .fc-list-item:nth-child(n+9):not(.keynote-entry) { background-color: lightyellow; }
 
 .fc-domingo-view .fc-list-item:nth-child(n+3):not(.keynote-entry) { background-color: lightyellow; }
-.fc-domingo-view .fc-list-item:nth-child(n+7):not(.keynote-entry) { background-color: lightblue; }
+.fc-domingo-view .fc-list-item:nth-child(n+11):not(.keynote-entry) { background-color: lightblue; }
