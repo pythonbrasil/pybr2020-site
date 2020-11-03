@@ -99,6 +99,8 @@ footer>a:visited {
     padding: 2px 6px;
     margin-left: 20px;
     border-radius: 4px;
+    color: rgb(116, 255, 190);
+    background: #3C59F0;
 }
 
 .room a {
