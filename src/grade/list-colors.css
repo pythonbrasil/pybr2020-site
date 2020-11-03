@@ -1,0 +1,41 @@
+.fc-segunda-view .fc-list-item:nth-child(n+4):not(.keynote-entry) { background-color: lightyellow; }
+.fc-segunda-view .fc-list-item:nth-child(n+8):not(.keynote-entry) { background-color: lightblue; }
+.fc-segunda-view .fc-list-item:nth-child(n+12):not(.keynote-entry) { background-color: lightyellow; }
+.fc-segunda-view .fc-list-item:nth-child(n+16):not(.keynote-entry) { background-color: lightblue; }
+.fc-segunda-view .fc-list-item:nth-child(n+20):not(.keynote-entry) { background-color: lightyellow; }
+.fc-segunda-view .fc-list-item:nth-child(n+24):not(.keynote-entry) { background-color: lightblue; }
+
+.fc-terca-view .fc-list-item:nth-child(n+3):not(.keynote-entry) { background-color: lightyellow; }
+.fc-terca-view .fc-list-item:nth-child(n+7):not(.keynote-entry) { background-color: lightblue; }
+.fc-terca-view .fc-list-item:nth-child(n+11):not(.keynote-entry) { background-color: lightyellow; }
+.fc-terca-view .fc-list-item:nth-child(n+15):not(.keynote-entry) { background-color: lightblue; }
+.fc-terca-view .fc-list-item:nth-child(n+19):not(.keynote-entry) { background-color: lightyellow; }
+.fc-terca-view .fc-list-item:nth-child(n+23):not(.keynote-entry) { background-color: lightblue; }
+
+.fc-quarta-view .fc-list-item:nth-child(n+3):not(.keynote-entry) { background-color: lightyellow; }
+.fc-quarta-view .fc-list-item:nth-child(n+7):not(.keynote-entry) { background-color: lightblue; }
+.fc-quarta-view .fc-list-item:nth-child(n+11):not(.keynote-entry) { background-color: lightyellow; }
+.fc-quarta-view .fc-list-item:nth-child(n+15):not(.keynote-entry) { background-color: lightblue; }
+.fc-quarta-view .fc-list-item:nth-child(n+19):not(.keynote-entry) { background-color: lightyellow; }
+.fc-quarta-view .fc-list-item:nth-child(n+23):not(.keynote-entry) { background-color: lightblue; }
+
+.fc-quinta-view .fc-list-item:nth-child(n+3):not(.keynote-entry) { background-color: lightyellow; }
+.fc-quinta-view .fc-list-item:nth-child(n+7):not(.keynote-entry) { background-color: lightblue; }
+.fc-quinta-view .fc-list-item:nth-child(n+11):not(.keynote-entry) { background-color: lightyellow; }
+.fc-quinta-view .fc-list-item:nth-child(n+15):not(.keynote-entry) { background-color: lightblue; }
+.fc-quinta-view .fc-list-item:nth-child(n+19):not(.keynote-entry) { background-color: lightyellow; }
+.fc-quinta-view .fc-list-item:nth-child(n+23):not(.keynote-entry) { background-color: lightblue; }
+
+.fc-sexta-view .fc-list-item:nth-child(n+3):not(.keynote-entry) { background-color: lightyellow; }
+.fc-sexta-view .fc-list-item:nth-child(n+7):not(.keynote-entry) { background-color: lightblue; }
+.fc-sexta-view .fc-list-item:nth-child(n+11):not(.keynote-entry) { background-color: lightyellow; }
+.fc-sexta-view .fc-list-item:nth-child(n+15):not(.keynote-entry) { background-color: lightblue; }
+.fc-sexta-view .fc-list-item:nth-child(n+19):not(.keynote-entry) { background-color: lightyellow; }
+.fc-sexta-view .fc-list-item:nth-child(n+23):not(.keynote-entry) { background-color: lightblue; }
+
+.fc-sabado-view .fc-list-item:nth-child(n+1):not(.keynote-entry) { background-color: lightyellow; }
+.fc-sabado-view .fc-list-item:nth-child(n+4):not(.keynote-entry) { background-color: lightblue; }
+.fc-sabado-view .fc-list-item:nth-child(n+8):not(.keynote-entry) { background-color: lightyellow; }
+
+.fc-domingo-view .fc-list-item:nth-child(n+3):not(.keynote-entry) { background-color: lightyellow; }
+.fc-domingo-view .fc-list-item:nth-child(n+7):not(.keynote-entry) { background-color: lightblue; }
