@@ -117,6 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
             description = description.replace(/\\n\\n/g, "<br>");
             description = description.replace(/\\n/g, " ");
             var youtube_link = info.event._def.extendedProps.private.youtube_channel;
+            var discord_link = info.event._def.extendedProps.private.discord_channel;
 
             document.getElementById("overlay-description").innerHTML = description;
             document.getElementById("overlay-title").innerHTML = title;
@@ -127,6 +128,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 toggle_label("overlay-youtube", "Assista no YouTube", "inline", youtube_link);
             }else{
                 toggle_label("overlay-youtube", '', "inline");
+            }
+
+            if(discord_link){
+                toggle_label("overlay-discord", "Participe e envie perguntas pelo Discord", "inline", discord_link);
+            }else{
+                toggle_label("overlay-discord", '', "inline");
             }
 
             open_details();
