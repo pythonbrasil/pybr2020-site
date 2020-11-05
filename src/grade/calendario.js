@@ -17,6 +17,7 @@ function toggle_label(nodeId, value, display, link) {
     }
     if (link){
         node.href = link;
+        node.target = "_blank";
     }
 }
 
@@ -110,31 +111,27 @@ document.addEventListener('DOMContentLoaded', function() {
         eventClick: function(info) {
             info.jsEvent.preventDefault();
 
-            var title = info.event.title;
-            var author = info.event._def.extendedProps.private.author;
-            var location = info.event._def.extendedProps.location;
-            var description = info.event._def.extendedProps.description || "";
+            let title = info.event.title;
+            let author = info.event._def.extendedProps.private.author;
+            let location = info.event._def.extendedProps.location;
+            let description = info.event._def.extendedProps.description || "";
             description = description.replace(/\\n\\n/g, "<br>");
             description = description.replace(/\\n/g, " ");
-            var youtube_link = info.event._def.extendedProps.private.youtube_channel;
-            var discord_link = info.event._def.extendedProps.private.discord_channel;
 
             document.getElementById("overlay-description").innerHTML = description;
             document.getElementById("overlay-title").innerHTML = title;
             toggle_label("overlay-author", author, "inline");
             toggle_label("overlay-room", location, "inline");
-            
-            if(youtube_link){
-                toggle_label("overlay-youtube", "Assista no YouTube", "inline", youtube_link);
-            }else{
-                toggle_label("overlay-youtube", '', "inline");
-            }
 
-            if(discord_link){
-                toggle_label("overlay-discord", "Participe e envie perguntas pelo Discord", "inline", discord_link);
-            }else{
-                toggle_label("overlay-discord", '', "inline");
-            }
+            const youtube_link = info.event._def.extendedProps.private.youtube_channel;
+            const discord_link = info.event._def.extendedProps.private.discord_channel;
+            const slides_url = info.event._def.extendedProps.private.slides_url;
+            const about_url = info.event._def.extendedProps.private.about_url;
+
+            toggle_label("overlay-youtube", (youtube_link) ? "Assista no YouTube" : "", "inline", youtube_link);
+            toggle_label("overlay-discord", (discord_link) ? "Participe e envie perguntas pelo Discord" : "", "inline", discord_link);
+            toggle_label("overlay-slides", (discord_link) ? "Slides" : "", "inline", slides_url);
+            toggle_label("overlay-about-external", (about_url) ? "Referência Externa" : "", "inline", about_url);
 
             open_details();
         },
@@ -166,9 +163,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (location) {
                 var discord_channel = info.event._def.extendedProps.private.discord_channel;
                 if (discord_channel) {
-                    var href = document.createElement("a");
+                    let href = document.createElement("a");
                     href.className = "discord";
                     href.href = discord_channel;
+                    href.target = "_blank";
                     href.appendChild(
                         document.createTextNode(location)
                     );
@@ -186,9 +184,10 @@ document.addEventListener('DOMContentLoaded', function() {
             // Youtube
             var youtube_channel = info.event._def.extendedProps.private.youtube_channel;
             if (youtube_channel) {
-                var href = document.createElement("a");
+                let href = document.createElement("a");
                 href.className = "youtube";
                 href.href = youtube_channel;
+                href.target = "_blank";
                 href.appendChild(
                     document.createTextNode("live")
                 );
